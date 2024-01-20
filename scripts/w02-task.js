@@ -23,19 +23,41 @@ let imageElement = document.getElementById("profilePicture");
 
 
 /* Step 4 - Adding Content */
-nameElement.innerHTML = fullName; 
+nameElement.innerHTML = `<strong>${fullName}</strong>`;
 
-imageElement.setAttribute('src', profilePicture);
-
-imageElement.setAttribute('alt', fullName);
 
 
 
 /* Step 5 - Array */
 
 
-let favoriteFood = new Array("Rice", "Beans", "Banana");
+let favoriteFood = ["Fried Rice and Chicken", "VegetableSoup and Eba"];
 
 foodElement.innerHTML = favoriteFood;
 
-foodElement.setAttribute('food',favoriteFood);
+
+
+
+//adding the value stored to the favorite food array
+/*
+favoriteFood.forEach((item) => {
+let li =
+    document.createElement("li");
+    li.innerText = item;
+    foodElement.appendChild(li);
+    addfav = "Beans and Plantain";
+    favoriteFood.push(addfav);``
+
+});
+
+// creating another variable to hold a single favorite food item
+*/
+var addFavorite = "Beans Plantain";
+favoriteFood.push(addFavorite);
+foodElement.innerHTML += `<br>${favoriteFood}`;
+// removing the first element using the shift method;
+favoriteFood.shift();
+foodElement.innerHTML += `<br>${favoriteFood}`;
+// removing the last element using the pop method;
+favoriteFood.pop();
+foodElement.innerHTML += `<br>${favoriteFood}`; 
