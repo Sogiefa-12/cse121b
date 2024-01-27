@@ -26,7 +26,7 @@ document.querySelector('#addNumbers').addEventListener('click',addNumbers);
 const subtract = function (number1, number2)  {
    return number1-number2;
 }
-const subtractNumbers = () => {
+const subtractNumbers = function() {
     let subtract1 = document.getElementById('subtract1').value;
     let subtract2 = document.getElementById('subtract2').value;
     let subtractNum = subtract(subtract1, subtract2);
