@@ -53,7 +53,7 @@ function filterTemples(temples) {
             displayTemples(temples.filter(temple => temple.location.toLowerCase().includes('utah')));
             break;
 
-        case 'nonutah':
+        case 'notutah':
             displayTemples(temples.filter(temple => !temple.location.toLowerCase().includes('utah')));
             break;
 
